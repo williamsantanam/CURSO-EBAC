@@ -1,0 +1,94 @@
+    /*
+    Seletores: Utilize seletores CSS para aplicar estilos a elementos específicos ou grupos de elementos.
+
+    Núcleos, Fontes, Box-model: Aplique as propriedades CSS para definir núcleos, fontes, tamanhos e espaçamentos dos elementos, utilizando o modelo de caixa (box-model)
+
+    Pseudo-classes e Pseudo-elementos: Utilize pseudo-classes e pseudo-elementos para criar efeitos visuais e interações com o usuário (hover, active, before, after)
+    */
+    * {
+        margin: 0;
+        font-family: sans-serif;
+    }
+    body {
+        line-height: 1.4;
+        background-color: white;
+    }
+
+    header{
+        /*border: 5px double rgba(255, 0, 0, 0.336);;*/
+        margin-top: 6px;
+        padding: 10px;
+        border-top: 5px double rgba(255, 0, 0, 0.336);
+        border-right: 5px double rgba(255, 0, 0, 0.336);
+        border-bottom: 5px double rgba(255, 0, 0, 0.336);
+        border-left: 5px double   rgba(255, 0, 0, 0.336);
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    header p {
+        text-align: justify;
+    }
+
+    header nav {
+        text-align: right;
+    }
+
+    header a {
+        padding: 5px;
+        margin-top: 5px;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: antiquewhite;
+        color: blue;
+    }
+
+     /*{
+        margin-top: 6px;
+        border-top: 5px double rgba(255, 0, 0, 0.336);
+        border-right: 5px double rgba(255, 0, 0, 0.336);
+        border-left: 5px double   rgba(255, 0, 0, 0.336);
+    }*/
+
+    .box {
+        margin-top: 6px;
+        padding: 10px;
+        border-top: 5px double rgba(255, 0, 0, 0.336);
+        border-right: 5px double rgba(255, 0, 0, 0.336);
+        border-bottom: 5px double rgba(255, 0, 0, 0.336);
+        border-left: 5px double   rgba(255, 0, 0, 0.336);
+    }
+    .caixa {
+        margin-top: 6px;
+        padding: 10px;
+        border-top: 5px double rgba(255, 0, 0, 0.336);
+        border-right: 5px double rgba(255, 0, 0, 0.336);
+        border-bottom: 5px double rgba(255, 0, 0, 0.336);
+        border-left: 5px double   rgba(255, 0, 0, 0.336);
+    }
+
+    .container {
+        margin-top: 6px;
+        padding: 10px;
+        border-top: 5px double rgba(255, 0, 0, 0.336);
+        border-right: 5px double rgba(255, 0, 0, 0.336);
+        border-bottom: 5px double rgba(255, 0, 0, 0.336);
+        border-left: 5px double  rgba(255, 0, 0, 0.336);
+    }
+    h2 {
+        text-align: center;
+    }
+    main p {
+        padding: 10px;
+        text-align: justify;
+    }
+    footer {
+        margin-top: 6px;
+        border: 5px double rgba(255, 0, 0, 0.336);
+        text-align:right;
+        
+    }
