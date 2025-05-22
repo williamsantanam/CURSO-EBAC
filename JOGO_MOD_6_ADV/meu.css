@@ -30,16 +30,6 @@ ul li {
     line-height: 1.6;
 }
 
-a {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #4CAF50;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-}
 
 a:hover {
     background-color: #45a049;
