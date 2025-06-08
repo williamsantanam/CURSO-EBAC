@@ -10,12 +10,14 @@
 <body>
   <h2>Simulador de Parquímetro</h2>
 
-  <label for="valor">Insira o valor (R$):</label><br>
-  <input type="number" step="0.01" id="valor" placeholder="Ex: 2.50"><br>
+  <label for="valor">Insira o valor (R$):</label>
+
+  <input type="number" step="0.01" id="valor" placeholder="Ex: 1.00" min="0" max="3">
+
   <button onclick="calcularTempo()">Simular</button>
 
-  <p id="tempo">Tempo de permanência: </p>
-  <p id="troco">Troco: </p>
+  <p id="tempo"> </p>
+  <p id="troco"> </p>
 
 </body>
 </html>
