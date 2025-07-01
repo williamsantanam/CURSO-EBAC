@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Simulador de Parquímetro</title>
-  <link rel="stylesheet" href="WILL.css">
-  <script src="WILLIAMM.js"></script>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parquímetro</title>
+    <script src="wwnovo.js"></script>
+    <link rel="stylesheet" href="WILL.css">
+
 </head>
-<body>
- <div class="parquimetro">
-  <h2>Parquímetro</h2>
+<body> 
 
-  <label for="tempo">Selecione o tempo:</label>
-  <select id="tempo">
-    <option value="30">30 minutos</option>
-    <option value="60">60 minutos</option>
-    <option value="120">120 minutos</option>
-  </select>
+    <h2>Parquímetro</h2>
+    
+    <label for="tempo">Selecione o tempo de estacionamento:</label>
 
-  <button onclick="calcularValor()">Calcular Valor</button>
-
-  <p id="resultado"></p>
-</div>
+    <select id="tempo">
+      <option value="30">30 minutos</option>
+      <option value="60">60 minutos</option>
+      <option value="120">120 minutos</option>
+    </select>
+    <button onclick="calcular()">Calcular Preço</button>
+    <p id="resultado"></p>
 
 </body>
 </html>
