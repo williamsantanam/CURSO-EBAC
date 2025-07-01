@@ -1,36 +1,21 @@
-  class Parquimetro {
-        constructor(taxaPorHora, taxaMinima) {
-        this.taxaPorHora = taxaPorHora;
-        this.taxaMinima = taxaMinima;
-        }
+ function calcularValor() {
+    const tempo = parseInt(document.getElementById("tempo").value);
+    let valor = 0;
 
-        calcularTempo(valorPago) {
-            const tempoEmHoras = (valorPago - this.taxaMinima) / this.taxaPorHora;
-            const tempoEmMinutos = tempoEmHoras * 60 * 1 ;
-            return tempoEmMinutos;
-            
-        }
-
-        calcularTroco(valorPago, tempo) {
-            const valorTotal = this.taxaMinima - (tempo / 60) + this.taxaPorHora;
-            return valorPago - valorTotal;
-
-        }
+    // Tabela de preços
+    switch (tempo) {
+      case 30:
+        valor = 1.00;
+        break;
+      case 60:
+        valor = 1.75;
+        break;
+      case 120:
+        valor = 3.00;
+        break;
+      default:
+        valor = 0;
     }
 
-    function calcularTempo() {
-        const valorPago = parseFloat(document.getElementById("valor").value);
-        const parquimetro = new Parquimetro(2.5, 1.5);//Taxa por hora e taxa mínima
-        const tempo = parquimetro.calcularTempo(valorPago);
-        if(valorPago >= 7){
-            alert("⚠️ERRO! VALOR MÁXIMO PERMITIDO É 6,50.")
-            return;
-        }
-        const troco = parquimetro.calcularTroco(valorPago, tempo);
-
-        document.getElementById("tempo").textContent = `Tempo de permanência: ${tempo.toFixed(0)} minutos;`
-        document.getElementById("troco").textContent = `Troco: R$ ${troco.toFixed(2)};`
-
-        
-    }
-
+    document.getElementById("resultado").innerText = `Valor a pagar: R$ ${valor.toFixed(2)}`;
+  }
