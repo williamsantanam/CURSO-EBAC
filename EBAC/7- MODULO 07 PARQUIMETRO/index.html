@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Simulador de Parquímetro</title>
-  <link rel="stylesheet" href="meu.css">
-  <script src="meu.js"></script>
+  <link rel="stylesheet" href="WILL.css">
+  <script src="WILLIAMM.js"></script>
   
 </head>
 <body>
-  <h2>Simulador de Parquímetro</h2>
+ <div class="parquimetro">
+  <h2>Parquímetro</h2>
 
-  <label for="valor">Insira o valor (R$):</label>
+  <label for="tempo">Selecione o tempo:</label>
+  <select id="tempo">
+    <option value="30">30 minutos</option>
+    <option value="60">60 minutos</option>
+    <option value="120">120 minutos</option>
+  </select>
 
-  <input type="number" step="0.01" id="valor" placeholder="Ex: 1.00" min="0" max="3">
+  <button onclick="calcularValor()">Calcular Valor</button>
 
-  <button onclick="calcularTempo()">Simular</button>
-
-  <p id="tempo"> </p>
-  <p id="troco"> </p>
+  <p id="resultado"></p>
+</div>
 
 </body>
 </html>
