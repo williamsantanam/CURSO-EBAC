@@ -1,21 +1,27 @@
- function calcularValor() {
-    const tempo = parseInt(document.getElementById("tempo").value);
-    let valor = 0;
+class Parquimetro {
+      constructor() {
+        // Tabela de preços com base no tempo em minutos
+        this.tabelaPrecos = {
+          30: 1.00,
+          60: 1.75,
+          120: 3.00
+        }
+      }
 
-    // Tabela de preços
-    switch (tempo) {
-      case 30:
-        valor = 1.00;
-        break;
-      case 60:
-        valor = 1.75;
-        break;
-      case 120:
-        valor = 3.00;
-        break;
-      default:
-        valor = 0;
+      calcularPreco(tempo) {
+        if (this.tabelaPrecos[tempo]) {
+          return this.tabelaPrecos[tempo];
+        } else {
+          return "Tempo inválido.";
+        }
+      }
     }
 
-    document.getElementById("resultado").innerText = `Valor a pagar: R$ ${valor.toFixed(2)}`;
-  }
+    // Instância do parquímetro
+    const parquimetro = new Parquimetro();
+
+    function calcular() {
+      const tempo = parseInt(document.getElementById("tempo").value);
+      const preco = parquimetro.calcularPreco(tempo);
+      document.getElementById("resultado").innerText = typeof preco === "number"? `Valor a pagar: R$ ${preco.toFixed(2)}`: preco;
+    }
